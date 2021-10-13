@@ -1,0 +1,153 @@
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+}
+
+@mixin flex {
+   display: flex;
+   align-items: center;
+}
+
+@mixin text($font-size, $font-weight, $line-height) {
+   font-size: $font-size;
+   font-weight: $font-weight;
+   line-height: $line-height;
+}
+
+body {
+   background: linear-gradient(
+         68.66deg,
+         #1a2a6c 0%,
+         #b21f1f 51.04%,
+         #fdbb2d 100%
+      )
+      no-repeat;
+}
+.container {
+   max-width: 1140px;
+   padding: 0 16px;
+   margin: 0 auto;
+}
+.header {
+   &__content {
+      @include flex;
+      width: 100%;
+      height: 100px;
+      .score {
+         @include text(24px, 400, 52px);
+         color: #ffffff;
+         text-transform: uppercase;
+         span {
+            margin-left: 5px;
+         }
+      }
+      .highscore {
+         @include text(24px, 400, 52px);
+         color: #ffffff;
+         margin-left: 66px;
+         margin-right: auto;
+         text-transform: uppercase;
+
+         span {
+            margin-left: 5px;
+         }
+      }
+      .btn-again {
+         @include flex;
+         background: transparent;
+         @include text(24px, 400, 52px);
+         color: #ffffff;
+         text-transform: uppercase;
+         padding: 0 16px;
+         border-radius: 5px;
+         cursor: pointer;
+         span {
+            margin-right: 16px;
+         }
+         &:hover {
+            background: rgba(255, 255, 255, 0.1);
+         }
+      }
+   }
+}
+
+.section {
+   &__content {
+      @include flex;
+      flex-direction: column;
+      margin: 50px 0;
+      h2 {
+         @include text(52px, 500, 63.39px);
+         letter-spacing: 5px;
+         color: #ffffff;
+         text-transform: uppercase;
+      }
+      .secret-number {
+         @include flex;
+         flex-direction: column;
+         border-radius: 50%;
+         background-color: rgba(255, 255, 255, 0.2);
+         width: 180px;
+         height: 180px;
+         margin-top: 32px;
+         span {
+            @include text(72px, 700, 87.77px);
+            color: #ffffff;
+            margin-top: 47px;
+         }
+      }
+      .message {
+         @include text(28px, 400, 34px);
+         color: #ffffff;
+         letter-spacing: 5px;
+         text-transform: uppercase;
+         margin-top: 80px;
+      }
+      .instruct {
+         @include text(20px, 400, 24px);
+         color: #ffffff;
+         margin-top: 20px;
+      }
+      .group-btn {
+         @include flex;
+         flex-direction: row;
+         margin-top: 80px;
+         margin-bottom: 103px;
+         input {
+            @include text(24px, 400, 26px);
+            padding: 18px 22px;
+            width: 100%;
+            background: transparent;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            cursor: pointer;
+            &::placeholder {
+               color: #ffffff;
+            }
+            &:focus {
+               background: rgba(255, 255, 255, 0.1);
+            }
+         }
+         button {
+            @include text(24px, 600, 30px);
+            background: transparent;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 16px 27px;
+            text-transform: uppercase;
+            border-left: none;
+            &:hover {
+               background: rgba(255, 255, 255, 0.1);
+            }
+         }
+      }
+   }
+}
