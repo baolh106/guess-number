@@ -25,6 +25,9 @@ body {
          #fdbb2d 100%
       )
       no-repeat;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
 }
 .container {
    max-width: 1140px;
@@ -35,9 +38,10 @@ body {
    &__content {
       @include flex;
       width: 100%;
-      height: 100px;
+      height: 85px;
+      // height: 15vh;
       .score {
-         @include text(24px, 400, 52px);
+         @include text(20px, 400, 52px);
          color: #ffffff;
          text-transform: uppercase;
          span {
@@ -45,7 +49,7 @@ body {
          }
       }
       .highscore {
-         @include text(24px, 400, 52px);
+         @include text(20px, 400, 52px);
          color: #ffffff;
          margin-left: 66px;
          margin-right: auto;
@@ -58,7 +62,7 @@ body {
       .btn-again {
          @include flex;
          background: transparent;
-         @include text(24px, 400, 52px);
+         @include text(20px, 400, 52px);
          color: #ffffff;
          text-transform: uppercase;
          padding: 0 16px;
@@ -78,25 +82,27 @@ body {
    &__content {
       @include flex;
       flex-direction: column;
-      margin: 50px 0;
+      // margin: 50px 0;
+      // height: 85vh;
       h2 {
          @include text(52px, 500, 63.39px);
          letter-spacing: 5px;
          color: #ffffff;
          text-transform: uppercase;
+         margin-top: 10px;
       }
       .secret-number {
          @include flex;
          flex-direction: column;
          border-radius: 50%;
          background-color: rgba(255, 255, 255, 0.2);
-         width: 180px;
-         height: 180px;
-         margin-top: 32px;
+         width: 150px;
+         height: 150px;
+         margin-top: 30px;
          span {
             @include text(72px, 700, 87.77px);
             color: #ffffff;
-            margin-top: 47px;
+            margin-top: 32px;
          }
       }
       .message {
@@ -104,7 +110,7 @@ body {
          color: #ffffff;
          letter-spacing: 5px;
          text-transform: uppercase;
-         margin-top: 80px;
+         margin-top: 35px;
       }
       .instruct {
          @include text(20px, 400, 24px);
@@ -114,8 +120,7 @@ body {
       .group-btn {
          @include flex;
          flex-direction: row;
-         margin-top: 80px;
-         margin-bottom: 103px;
+         margin-top: 46px;
          input {
             @include text(24px, 400, 26px);
             padding: 18px 22px;
@@ -130,6 +135,10 @@ body {
                color: #ffffff;
             }
             &:focus {
+               background: rgba(255, 255, 255, 0.1);
+               outline: none;
+            }
+            &:hover {
                background: rgba(255, 255, 255, 0.1);
             }
          }
