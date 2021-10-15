@@ -48,6 +48,7 @@ body {
   line-height: 52px;
   color: #ffffff;
   text-transform: uppercase;
+  width: 104px;
 }
 
 .header__content .score span {
@@ -62,6 +63,7 @@ body {
   margin-left: 66px;
   margin-right: auto;
   text-transform: uppercase;
+  width: 146px;
 }
 
 .header__content .highscore span {
